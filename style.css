@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swa');
+/* 
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Poppins', sans-serif; 
+*/
+
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #18171d;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(
+        90deg,
+        rgba(47,28,42,1) 0%,
+        rgba(45,54,61,1) 50%,
+        rgba(19,41,65,1) 100%
+    );
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separacion entre lineas del menu */
+}
+
+.logo{
+    font-size: 25px;
+    color: #BA8250;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 17px;
+    padding: 20px;
+    color: #DFDDE0;
+    text-transform: uppercase;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color:#BA8250
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4e4b5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table{
+    width: 100%;
+}
+
+th, td{
+    color: #DFDDE0;
+}
+
+.borrar{
+    background-color: #BA8250;
+    border-radius: 50%;
+    padding: 5px 10px;  /* esta clase se crea en javascript */
+    color: #DFDDE0;
+    font-weight: 800;   
+    cursor: pointer;
+}
+
+.header-txt{   /* este es el contenido de adentro */
+    text-align: center;
+}
+/* titulo "OFERTAS ESPECIALES */
+.header-txt h1 {
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 100px;
+     color: #838586;
+}
+/* fin titulo "OFERTAS ESPECIALES */
+
+.header-txt p{
+    font-size: 16px;
+    color: #DFDDE0;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+.header-txt img{
+    width: 700px;
+    display: block;
+}
+
+/* estilos para el boton "INFORMACION" */
+
+.btn-1, .btn-2{
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #BA8250;
+    color: #DFDDE0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 55px;
+}
+/* ORGANIZAR IMG centrar- */
+
+.about {
+    padding: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-img{
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.about-img img{
+    width: 350px;
+}
+
+.about-txt{
+    flex-basis: 50px;
+}
+
+h2{
+    color: #DFDDE0;
+    font-size: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 16px;
+    color:#DFDDE0;
+}
+
+/* productos (motos) */
+.product {
+    padding: 0 0 200px 0;
+    text-align: center;
+}
+
+.product h2 {
+    margin-bottom: 50px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+}
+h3 {
+    color: #DFDDE0;
+    font-family:'Bebas Neue', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.precio{
+    color: #BA8250;
+    font-weight: 800;
+    padding: 10px 0;
+    margin-bottom: 10;
+}
+
+.btn-2{
+    margin: 0;
+    padding: 8px 35px;
+}
+/* aqui finaliza sesion de productos */
+
+
+/* inicio estilos al footer */
+.footer{
+    border-top: 1px solid #BA815065;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.link h3{
+    font-size: 22px;
+}
+
+.link a{
+    font-size: 16px;
+    color: c0c0c1;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.link a:hover {
+    color: #BA8250;
+}
+
+@media (max-width:991px){ /* cuando la resolucion baje a 991 px tenga las siguientes caracteristicas */
+    
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #18171d;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    /* fin estilos al footer */
+
+
+    .submenu:hover #carrito {
+        min-width: 340%;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 100px 30px;
+    }
+
+    .header-txt{
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 90px;
+        line-height: 1;
+    }
+    
+    .about {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img{
+        order: 2;
+    }
+
+    .about-img img{
+        width: 250px;
+    }
+
+    .about-txt{
+        margin-bottom: 25px;
+    }
+
+    /* productos */
+
+    .product{
+        padding: 30px;
+    }
+
+    .product-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+
+    }
+
+
+
+    /* fin productos */
+
+/* inicio estilo para el footer */
+
+   .footer {
+    padding: 30px;
+    flex-direction: column;
+    text-align: center;
+   }
+
+   /* fin estilo para el footer */
+
+
+
+
+}
+
